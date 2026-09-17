@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-   
 
-    <title>Fortune Teller</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="https://glitch.com/favicon.ico" />
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- this is the start of content -->
-    <h1>
-      Fortune Teller
-      <img src="sportcar.jpg" alt="Car with white background" width="600" />
-    </h1>
-    <form name="fortuneTeller" id="fortuneTeller" action="fortune.html">
-      <label for="namefield">Name:</label>
-      <input type="text" id="namefield" name="name" placeholder="your name" required>
-      <br>
-      <label for="questionfield">Question:</label>
-      <input type="text" id="questionfield" name="question" placeholder="a yes or no question">
-      <br>
-      <input type="submit">
-    </form>
-    <div id="fortune"></div>
-  </body>
+
+  <title>Fortune Teller</title>
+
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- this is the start of content -->
+  <h1>
+    Fortune Teller
+  </h1>
+    <img src="sportcar.jpg" alt="Car with white background" width="270" />
+  <form name="fortuneTeller" id="fortuneTeller" action="fortune.html">
+    <label for="namefield">Name:</label>
+    <input type="text" id="namefield" name="name" placeholder="your name" required>
+    <br>
+    <label for="questionfield">Question:</label>
+    <input type="text" id="questionfield" name="question" placeholder="a yes or no question">
+    <br>
+
+    <label for="modelYear">The year of the car</label>
+    <input type="number" id="modelYear" name="modelYear" min="1950" max="2026" value="1969" />
+
+    <label for="horsepower">How much power do you need?</label>
+    <input type="range" id="horsepower" name="horsepower" min="100" max="800" step="50" value="300" />
+
+    <label for="paintColor">The color that whispers to you</label>
+    <input type="color" id="paintColor" name="paintColor" value="#c0392b" />
+    <label for="cars">Choose a car brand :</label>
+    <select id="cars" name="cars">
+
+      <option value="Lexus">Lexus</option>
+      <option value="Honda">Honda</option>
+      <option value="Audi">Audi</option>
+
+    </select>
+    <p>
+      <label for="problem">Describe any problems you have seen on the road</label>
+      <textarea id="problem" name="problem" rows="4" cols="40"></textarea>
+    </p>
+
+  <button type="submit">Tell my fortune</button>
+  </form>
+</body>
+
 </html>
